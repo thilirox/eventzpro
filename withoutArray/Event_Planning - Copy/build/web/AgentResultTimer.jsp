@@ -50,6 +50,7 @@ String select[] = request.getParameterValues("id");
 String header="";
 int headersize = select.length;
 String totalSelection="";
+int x=0;
 if (select != null && select.length != 0) {
 
 for (int i = 0; i < select.length; i++) {
@@ -58,7 +59,22 @@ totalSelection = totalSelection+select[i];
 
 System.out.println(totalSelection);
 }
-for (int i = 0; i < select.length-1 ; i++) {
+if(totalSelection.contains("Hotel")){
+    x=x+1;
+}
+if(totalSelection.contains("Photography")){
+    x=x+1;
+}
+if(totalSelection.contains("decorations")){
+    x=x+1;
+}
+if(totalSelection.contains("Music")){
+    x=x+1;
+}
+if(totalSelection.contains("Catering")){
+    x=x+1;
+}
+for (int i = 0; i < x-1 ; i++) {
 header = header+"join_sales";
 }
 
@@ -68,7 +84,8 @@ header = header+"join_sales";
  <% 
      
    //  outputFormating format= new outputFormating();
-    String budgetIn = request.getParameter("txtbudget"); 
+    String budgetIn
+ = request.getParameter("txtbudget"); 
     String guestIn = request.getParameter("txtguest");
     System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"+guestIn);
     int guest = Integer.parseInt(guestIn);

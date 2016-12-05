@@ -1,12 +1,10 @@
 <%-- 
-    Document   : AutomaticPG
-    Created on : Nov 22, 2016, 1:26:38 PM
+    Document   : registerServices
+    Created on : Dec 5, 2016, 1:15:34 PM
     Author     : Thilini.Samaranayake
 --%>
 
-<%@page import="DatabaseOperations.agentOutputHandling"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,17 +30,7 @@
   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/sweetAlert/dist/sweetalert.css">
 
         <!-- JS for range infor -->
-        <script type="text/javascript" >
-            function hotelrange() {
-                swal({
-                    title: "Hotel <small>Ranges</small>!",
-                    text: "A custommessage.",
-                            html: true
-                });
-
-            }
-
-        </script>
+        
 
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,9 +41,7 @@
     </head>
 
     <body>
-        <% agentOutputHandling obj = new agentOutputHandling();
-            obj.clearResults();  %>
-
+        
         <section id="container" >
 
             <!--header start-->
@@ -135,76 +121,41 @@
                     <div class="row">
                         <div class="col-lg-9 main-chart">
                             <div class="row mtbox">
-                                <h2 class="section-heading" style="color: black" >  Package Generator </h2>   
+                                <h2 class="section-heading" style="color: black" >  Register Your Service </h2>   
                                 <h3 class="section-heading">  Enter Your Request </h3>
                                 <br>
-                                <form  action="AgentResultTimer.jsp" method="POST">
-
-                                    <input class="form-control" type="text" value="Enter your budget" name="txtbudget">
-                                    <br>
-                                    <input class="form-control" type="text" value="No of guests" name="txtguest">
-                                    <br>
-
-                                    <br>
-                                    <h3 class="section-heading">  Choose the services you need for your package </h3>
-                                    <br>
-                                    <fieldset id="1">
-                                        <h4>  Hotels </h4> 
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox" name="id" value="HotelFiveStar"> Five Star</label>
-
-                                        </div>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" value="HotelFourStar"> Four Star</label>
-
-                                        </div>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" value="HotelOther"> Other</label>
-
-                                        </div>
-                                    </fieldset>
-                                    <button type="button" class="btn btn-primary btn-sm"  onclick="hotelrange()">Range Info</button>
-                                    <fieldset id="2">
-                                        <h4>  Photography </h4>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" value="PhotographyPremium">Premium</label>
-                                        </div>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" value="PhotographyNormal">Normal</label>
-                                        </div>
-                                    </fieldset>
-                                    <fieldset>
-                                        <h4> Decorations </h4>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" value="decorationsPremium">Premium</label>
-                                        </div>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" value="decorationsNormal">Normal</label>
-                                        </div>
-                                    </fieldset>
-                                    <fieldset>
-                                        <h4> Music And Sounds </h4>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" value="MusicClassic">Classic</label>
-                                        </div>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" value="MusicCalipso">Calipso</label>
-                                        </div>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" value="MusicDJ">DJ</label>
-                                        </div>
-                                    </fieldset>
-                                    <fieldset>
-                                        <h4>Other </h4>
-                                        <div class="checkbox-inline">
-                                            <label><input type="checkbox" name="id" value="Catering">Cutlary and Catering</label>
-                                        </div>
-                                        <br>
-                                    </fieldset>
-                                    <button type="submit"  class="btn btn-warning" >Search</button>
-                                    <br>
-
-
+                                <form action="saveService.jsp" method="POST">
+                                       <div class="form-group">
+                             <label for="usr">First Name:</label>
+                             <input type="text" class="form-control" name="txtFname" id="usr">
+                          </div>
+                          <div class="form-group">
+                             <label for="usr">Last Name:</label>
+                             <input type="text" class="form-control" name="txtLname" id="usr">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name ="txtEmail">
+                          </div>
+                          <div class="form-group">
+                             <label for="usr">Contact No:</label>
+                             <input type="text" class="form-control" name="txtContact" id="usr" placeholder="Your Mobile Number">
+                          </div>
+                          <div class="form-group">
+                             <label for="usr">Residential Area:</label>
+                             <input type="text" class="form-control" name="txtCity" id="usr" placeholder="Select Your Residential Area">
+                          </div>
+                          <div class="form-group">
+                             <label for="usr">User Name:</label>
+                             <input type="text" class="form-control" name="txtUN" id="usr" placeholder="Your User Name">
+                          </div>
+                          <div class="form-group">
+                             <label for="pwd">Password:</label>
+                             <input type="password" class="form-control" id="pwd" name ="txtPW">
+                          </div>
+                          <button type="submit" class="btn btn-warning">Submit</button>
+                                    
+                                    
                                 </form>
                             </div><!-- /row mt -->	
 
