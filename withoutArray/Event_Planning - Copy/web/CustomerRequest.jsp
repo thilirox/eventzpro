@@ -62,7 +62,7 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
-              	 <%
+             	 <%
                       String uname = session.getAttribute("userName").toString();
                       %>
               	  
