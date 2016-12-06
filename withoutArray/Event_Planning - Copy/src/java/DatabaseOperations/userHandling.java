@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package DatabaseOperations;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
@@ -20,56 +21,55 @@ import java.util.logging.Logger;
  * @author Thilini.Samaranayake
  */
 public class userHandling {
-    PreparedStatement sqlStatement= null;
+
+    PreparedStatement sqlStatement = null;
     ResultSet resultset = null;
     dbConnection con = new dbConnection();
-    
-    
-    public ResultSet getUser (String UN){
-     try{   
 
-    String sql= "select * from user where UName='"+UN+"'; " ;
-    System.out.println(sql);
-    Statement stat = con.connection.createStatement();
-     resultset = stat.executeQuery(sql);
-     }
-     catch (SQLException ex) {
+    public ResultSet getUser(String UN) {
+        try {
+
+            String sql = "select * from user where UName='" + UN + "'; ";
+            System.out.println(sql);
+            Statement stat = con.connection.createStatement();
+            resultset = stat.executeQuery(sql);
+        } catch (SQLException ex) {
             Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-    return resultset;
+        return resultset;
     }
-    
-    public String getUser (String Email , String PW){
-         String userT="" ;
-     try{   
-      
-        
-    String sql= "select * from user where Email ='"+Email+"' AND PassWord='"+PW+"'; " ;
-    System.out.println(sql);
-    Statement stat = con.connection.createStatement();
-     resultset = stat.executeQuery(sql);
-     while(resultset.next()){
-          userT = resultset.getString("Type").toString();
-          System.out.println(userT);
-         return userT;
-        }
-     }
-     catch (SQLException ex) {
-         
+
+    public String getUser(String Email, String PW) {
+        String userT = "";
+        try {
+
+            String sql = "select * from user where Email ='" + Email + "' AND PassWord='" + PW + "'; ";
+            System.out.println(sql);
+            Statement stat = con.connection.createStatement();
+            resultset = stat.executeQuery(sql);
+            while (resultset.next()) {
+                userT = resultset.getString("Type").toString();
+                System.out.println(userT);
+                return userT;
+            }
+        } catch (SQLException ex) {
+
             Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-     return userT;
-   
+        return userT;
+
     }
-    public String addUser (String fname , String lname,String un , String pw ,String email, int Contact,String type ,String City  ) throws SQLException{
-          
-        try {sqlStatement = con.connection.prepareStatement( "INSERT INTO user(UId,FirstName,LastName,UName,"
-                   + "                                                  PassWord,Email,MobileNo,Type,City)VALUES (?,?,?,?,?,?,?,?,?)" ) ;
-             
-          String S = new SimpleDateFormat("yyHHmmss").format(Calendar.getInstance().getTime());
+
+    public String addUser(String fname, String lname, String un, String pw, String email, int Contact, String type, String City) throws SQLException {
+
+        try {
+            sqlStatement = con.connection.prepareStatement("INSERT INTO user(UId,FirstName,LastName,UName,"
+                    + "                                                  PassWord,Email,MobileNo,Type,City)VALUES (?,?,?,?,?,?,?,?,?)");
+
+            String S = new SimpleDateFormat("yyHHmmss").format(Calendar.getInstance().getTime());
             int Uid = Integer.parseInt(S);
-           
-            sqlStatement.setInt(1,Uid);
+
+            sqlStatement.setInt(1, Uid);
             sqlStatement.setString(2, fname);
             sqlStatement.setString(3, lname);
             sqlStatement.setString(4, un);
@@ -78,31 +78,62 @@ public class userHandling {
             sqlStatement.setInt(7, Contact);
             sqlStatement.setString(8, type);
             sqlStatement.setString(9, City);
-             sqlStatement.executeUpdate();
+            sqlStatement.executeUpdate();
             return "Success";
-        }
-        catch (SQLException ex) {
-         
+        } catch (SQLException ex) {
+
             Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
             return "error";
         }
-    
+
     }
-    public ResultSet getUserDetails(String Email , String PW){
-    
-     try{   
-    String sql= "select * from user where Email ='"+Email+"' AND PassWord='"+PW+"'; " ;
-    System.out.println(sql);
-    Statement stat = con.connection.createStatement();
-     resultset = stat.executeQuery(sql);
-  
-        }
-     
-     catch (SQLException ex) {
-         
+
+    public ResultSet getUserDetails(String Email, String PW) {
+
+        try {
+            String sql = "select * from user where Email ='" + Email + "' AND PassWord='" + PW + "'; ";
+            System.out.println(sql);
+            Statement stat = con.connection.createStatement();
+            resultset = stat.executeQuery(sql);
+
+        } catch (SQLException ex) {
+
             Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
         }
-     return resultset;
+        return resultset;
     }
-    
+
+    public String addService(String SName, String Oname, String CPname, int Cno, String email,
+            String address, String type,String web, String Lat, String longti) {
+
+        try {
+            sqlStatement = con.connection.prepareStatement("INSERT INTO tblservices(SName,OwnerName,CPerson,CNumber,"
+                    + "email,Address,Type,WebsiteURL,Latitude,Longitute"
+                    + ") VALUES (?,?,?,?,?,?,?,?,?,?)");
+
+            String S = new SimpleDateFormat("yyHHmmss").format(Calendar.getInstance().getTime());
+            int Uid = Integer.parseInt(S);
+
+            sqlStatement.setString(1,SName);
+            
+            sqlStatement.setString(2, Oname);
+            sqlStatement.setString(3, CPname);
+            sqlStatement.setInt(4, Cno);
+            sqlStatement.setString(5, email);
+            sqlStatement.setString(6, address);
+            sqlStatement.setString(7, type);
+            sqlStatement.setString(8, web);
+            sqlStatement.setString(9, Lat);
+            sqlStatement.setString(10, longti);
+            
+            sqlStatement.executeUpdate();
+            return "Success";
+        } catch (SQLException ex) {
+
+            Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
+            return "error";
+        }
+
+    }
+
 }

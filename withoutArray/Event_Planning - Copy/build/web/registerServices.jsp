@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% Class.forName("com.mysql.jdbc.Driver"); %>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -62,54 +63,7 @@
                 </div>
             </header>
             <!--header end-->
-            <!--sidebar start-->
-            <aside>
-                <div id="sidebar"  class="nav-collapse ">
-                    <!-- sidebar menu start-->
-                    <ul class="sidebar-menu" id="nav-accordion">
-
-
-                        <%
-                            String uname = session.getAttribute("userName").toString();
-                        %>
-
-                        <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-                        <h5 class="centered"><%=uname%></h5>
-
-                        <li class="mt">
-                            <a class="active" href="index.html">
-                                <i class="fa fa-dashboard"></i>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="javascript:;" >
-                                <i class="fa fa-user"></i>
-                                <span>Edit Profile</span>
-                            </a>
-
-                        </li>
-
-                        <li class="sub-menu">
-                            <a href="javascript:;" >
-                                <i class="fa fa-search"></i>
-                                <span>Search Services</span>
-                            </a>
-                        </li>
-                        <li class="sub-menu">
-                            <a href="javascript:;" >
-                                <i class="fa fa-list"></i>
-                                <span>Request Status</span>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                    <!-- sidebar menu end-->
-                </div>
-            </aside>
-            <!--sidebar end-->
+           
 
             <!-- **********************************************************************************************************************************************************
             MAIN CONTENT
@@ -124,27 +78,49 @@
                                 <h2 class="section-heading" style="color: black" >  Register Your Service </h2>   
                                 <h3 class="section-heading">  Enter Your Request </h3>
                                 <br>
-                                <form action="saveService.jsp" method="POST">
+                                <form action="registerServicesMethod.jsp" method="POST">
                                        <div class="form-group">
-                             <label for="usr">First Name:</label>
-                             <input type="text" class="form-control" name="txtFname" id="usr">
+                             <label for="usr">Service Name:</label>
+                             <input type="text" class="form-control" name="txtSname" >
                           </div>
                           <div class="form-group">
-                             <label for="usr">Last Name:</label>
-                             <input type="text" class="form-control" name="txtLname" id="usr">
+                             <label for="usr">Owner Name:</label>
+                             <input type="text" class="form-control" name="txtOname" >
+                          </div>
+                         <div class="form-group">
+                             <label for="usr">Contact Person Name:</label>
+                             <input type="text" class="form-control" name="txtCname" >
                           </div>
                           <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" name ="txtEmail">
+                            <input type="email" class="form-control"  placeholder="Enter email" name ="txtEmail">
                           </div>
                           <div class="form-group">
                              <label for="usr">Contact No:</label>
-                             <input type="text" class="form-control" name="txtContact" id="usr" placeholder="Your Mobile Number">
+                             <input type="text" class="form-control" name="txtContact"  placeholder="Your Conatact Number">
                           </div>
                           <div class="form-group">
-                             <label for="usr">Residential Area:</label>
-                             <input type="text" class="form-control" name="txtCity" id="usr" placeholder="Select Your Residential Area">
+                             <label for="usr">Address:</label>
+                             <input type="text" class="form-control" name="txtAdd"  placeholder="Enter  Your Adress">
                           </div>
+                          
+                          <div class="form-group">
+                             <label for="usr">Latitude:</label>
+                             <input type="text" class="form-control" name="txtLt"  placeholder="Enter Latitude">
+                          </div>
+                           <div class="form-group">
+                             <label for="usr">Longitute:</label>
+                             <input type="text" class="form-control" name="txtLong" id="usr" placeholder="Enter Longitude">
+                          </div>  
+                           <div class="form-group">
+                             <label for="usr">Type:</label>
+                             <input type="text" class="form-control" name="txtType" id="usr" placeholder="Select Your Service Type">
+                          </div>
+                          <div class="form-group">
+                             <label for="usr">Website URL:</label>
+                             <input type="text" class="form-control" name="txtURL" id="usr" placeholder="Enter the website url if You have any">
+                          </div>
+                              
                           <div class="form-group">
                              <label for="usr">User Name:</label>
                              <input type="text" class="form-control" name="txtUN" id="usr" placeholder="Your User Name">
@@ -159,10 +135,6 @@
                                 </form>
                             </div><!-- /row mt -->	
 
-
-
-
-
                             <!-- **********************************************************************************************************************************************************
                             RIGHT SIDEBAR CONTENT
                             *********************************************************************************************************************************************************** -->                  
@@ -174,38 +146,11 @@
 
             <!--main content end-->
             <!--footer start-->
-            <footer class="site-footer">
-                <div class="text-center">
-                    EventZ@2016
-                    <a href="index.html#" class="go-top">
-                        <i class="fa fa-angle-up"></i>
-                    </a>
-                </div>
-            </footer>
+            <%@include file="footer.jsp" %>
             <!--footer end-->
         </section>
 
-        <!-- js placed at the end of the document so the pages load faster -->
-        <script src="assets/js/jquery.js"></script>
-        <script src="assets/js/jquery-1.8.3.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-        <script src="assets/js/jquery.scrollTo.min.js"></script>
-        <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-        <script src="assets/js/jquery.sparkline.js"></script>
-
-
-        <!--common script for all pages-->
-        <script src="assets/js/common-scripts.js"></script>
-
-        <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
-        <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
-
-        <!--script for this page-->
-        <script src="assets/js/sparkline-chart.js"></script>    
-        <script src="assets/js/zabuto_calendar.js"></script>	
-
-
+       <%@include file="footerScripts.jsp" %>
 
 
 

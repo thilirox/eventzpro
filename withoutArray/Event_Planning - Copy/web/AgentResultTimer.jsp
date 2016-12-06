@@ -12,35 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    
-
-    <title>e -Eventz</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
-    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">    
-    
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/style-responsive.css" rel="stylesheet">
-
-    <script src="assets/js/chart-master/Chart.js"></script>
-    
-     <!-- Sweet Alert -->
-  <script src="${pageContext.request.contextPath}/sweetAlert/dist/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/sweetAlert/dist/sweetalert.css">
-    
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <%@ include file="headerScripts.jsp" %>
   </head>
 
   <body>
@@ -99,70 +71,7 @@ header = header+"join_sales";
  %>
   <section id="container" >
      
-      <!--header start-->
-      <header class="header black-bg">
-              <div class="sidebar-toggle-box">
-                  <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-              </div>
-            <!--logo start-->
-            <a href="index.html" class="logo"><b>EVENTZ</b></a>
-            <!--logo end-->
-            <div class="nav notify-row" id="top_menu">
-              
-            </div>
-            <div class="top-menu">
-            	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="HomePage.jsp">Logout</a></li>
-            	</ul>
-            </div>
-        </header>
-      <!--header end-->
-      <!--sidebar start-->
-      <aside>
-          <div id="sidebar"  class="nav-collapse ">
-              <!-- sidebar menu start-->
-              <ul class="sidebar-menu" id="nav-accordion">
-              <%
-                      String uname = session.getAttribute("userName").toString();
-                      %>
-              	  
-              	 <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered"><%=uname %></h5>
-              	  	
-                  <li class="mt">
-                      <a class="active" href="index.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
-                      </a>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-user"></i>
-                          <span>Edit Profile</span>
-                      </a>
-                     
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-search"></i>
-                          <span>Search Services</span>
-                      </a>
-                  </li>
-                <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-list"></i>
-                          <span>Request Status</span>
-                      </a>
-                  </li>
-                  
-
-              </ul>
-              <!-- sidebar menu end-->
-          </div>
-      </aside>
-      <!--sidebar end-->
+      <%@ include file="header.jsp" %>
       
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
@@ -192,10 +101,7 @@ header = header+"join_sales";
                       </script>
                   	
                 
-                       <div id="div1" style="visibility:hidden;">
-                       <a href="displayPackagesII.jsp" >Click here</a>
                        
-                       <div> 
                       
                       
                   	</div><!-- /row mt -->	
@@ -213,7 +119,7 @@ header = header+"join_sales";
           </section>
       </section>
       
-      <!--footer end-->
+      
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
