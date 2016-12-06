@@ -3,30 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/codebase/dhtmlxscheduler_classic.css</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/CreateOntology.jsp</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/demo.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/creative.min.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/jquery.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/jquery.easing.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/WaitForResults.jsp</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/codebase/dhtmlxscheduler.css</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/CustomerRequest.jsp</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/camera.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/AgentHandling/ServiceAgent.java</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/TMForm.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/AgentHandling/CustomerAgent.java</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/nbproject/build-impl.xml</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/AgentHandling/ServiceManager.java</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/codebase/dhtmlxscheduler_glossy.css</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/creative.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/jquery-migrate-1.1.1.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/UserRegistration.jsp</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/shCore.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/style/js/touchTouch.jquery.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/events.jsp</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/app/rangeInfo.js</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/packageDetails.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/registerServicesMethod.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/registerServices.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/footerScripts.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/AgentResultTimer.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/footer.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/DatabaseOperations/userHandling.java</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/DatabaseOperations/serviceReqHandling.java</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/headerScripts.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/AutomaticPG.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/header.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/newServiceOrders.jsp</file>
         </group>
     </open-files>
 </project-private>
