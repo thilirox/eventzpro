@@ -5,6 +5,7 @@
 --%>
 
 
+<%@page import="CommunicationHandling.mail"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.text.DateFormat"%>
 <%@page import="java.util.Locale"%>
@@ -117,8 +118,8 @@ else {%>
                     ServiceEmail= serviceSet.getString("email");
                     }
                     //send email to service provider
-                  mailHandling mailToService = new mailHandling();
-               //   mailToService.notifyServiceProvider(ServiceEmail);
+                  mail mailToService = new mail();
+                  mailToService.notifyServiceProvider("thilisamaranayake@gmail.com");
               
                %>
                   
