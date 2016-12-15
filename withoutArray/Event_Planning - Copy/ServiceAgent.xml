@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <services>
 <hotels>
-<hotel package="Package01" up="150000" name="HotelGaladari" id="1" mno="200">hotel</hotel>
-<hotel package="Package02" up="125000" name="HotelKingsbury" id="2" mno="100" >hotel</hotel>
-<hotel package="Package01" up="35000" name="HotelChaya" id="3" mno="300">hotel</hotel>
+<hotel package="Package01" up="150000" name="HotelGaladari" id="1" minno="200"  type="" maxNo=" "> hotel</hotel>
+<hotel package="Package02" up="125000" name="HotelKingsbury" id="2" minno="100" >hotel</hotel>
+<hotel package="Package01" up="35000" name="HotelChaya" id="3" minno="300">hotel</hotel>
 
 </hotels>
 <photographys>

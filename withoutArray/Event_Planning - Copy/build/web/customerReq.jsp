@@ -16,7 +16,7 @@
 <%@page import="DatabaseOperations.servicePackageHandling"%>
 <%@page import="DatabaseOperations.userHandling"%>
 <%@page import="DatabaseOperations.serviceReqHandling"%>
-<%@page import="CommunicationHandling.mailHandling"%>
+
 <!DOCTYPE html>
 <html>
     <head>
