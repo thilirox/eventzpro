@@ -3,13 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/DatabaseOperations/dbConnection.java</file>
             <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/AgentResultTimer.jsp</file>
             <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/ServiceAgent.xml</file>
-            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/CommunicationHandling/mail.java</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/footer.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/DisplayPackageDetails.jsp</file>
             <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/CustomerRequest.jsp</file>
             <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/completedServiceOders.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/header.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/ManualPKSearch.jsp</file>
             <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/customerReq.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/DatabaseOperations/dbConnection.java</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/confirmedServiceOrders.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/CommunicationHandling/mail.java</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/DisplayPckCusView.jsp</file>
+            <file>file:/D:/myFiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/AutomaticPG.jsp</file>
         </group>
     </open-files>
 </project-private>
