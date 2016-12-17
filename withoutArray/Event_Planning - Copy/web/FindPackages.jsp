@@ -143,10 +143,6 @@
         </div>
     </section>
 
-    
-
-    
-
     <aside class="bg-dark">
         <div class="container text-center">
             
