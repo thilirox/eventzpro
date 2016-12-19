@@ -19,12 +19,27 @@
                  var xhttp = new XMLHttpRequest();
                  xhttp.onreadystatechange= function(){
                      if(xhttp.readyState===4 & xhttp.status===200){
-                         document.getElementById('services').innerHTML=xhttp.responseText;
+                         document.getElementById('SName').innerHTML=xhttp.responseText;
                      }
                  };
                  xhttp.open("POST","loadService?valajax="+sType,true);
                  xhttp.send();
              } 
+             
+      </script>
+      <script >
+             function getpackages(){
+                 var sType = document.getElementById('SName').value;
+                 var xhttp = new XMLHttpRequest();
+                 xhttp.onreadystatechange= function(){
+                     if(xhttp.readyState===4 & xhttp.status===200){
+                         document.getElementById('packageList').innerHTML=xhttp.responseText;
+                     }
+                 };
+                 xhttp.open("POST","loadPackages?valajax="+sType,true);
+                 xhttp.send();
+             } 
+             
       </script>
   </head>
   <body>
@@ -46,32 +61,29 @@
                       <br>
                   	<% servicePackageHandling obj = new servicePackageHandling();
                         ResultSet sTypes = obj.getAllServiceTypes(); %>
-                      <form name="mannualPK" target="packageDetails.jsp">
+                        <form  action="DisplayPackageDetails.jsp" method="POST">
                           <div class="form-group">
                                 <label for="sel1">Select Service Type:</label>
-                                <select class="form-control" id="sel1"  name="type" onchange="getservices()" >
-                                    <% while (sTypes.next()){ %>
-                                    <option id="stype" value="<%=sTypes.getString("Type") %>"><%=sTypes.getString("Type") %></option>
+                                <select class="form-control" id="stype"  name="type" onchange="getservices()" >
+                                    <% while (sTypes.next()){
+                                        String serviceType= sTypes.getString("Type"); %>
+                                    <option  value="<%=serviceType %>"><%=serviceType %></option>
                                     <%} %>
                                 </select>
                            </div>
                           <div  class="form-group">
                                 <label for="sel1">Select list:</label>
-                                <select class="form-control" id="services" name="SName">
-                                  
+                                <select class="form-control" id="SName" name="Service" onchange="getpackages()">
                                 </select>
                            </div>
                           <div class="form-group">
                                 <label for="sel1">Select list:</label>
-                                <select class="form-control" id="sel1">
-                                  <option>PackageOne</option>
-                                  <option>Packagetwo</option>
-                                  <option>3</option>
-                                  <option>4</option>
+                                <select class="form-control" id="packageList" name="Package">
                                 </select>
                            </div>
                           <br>
-                          <button type="button" class="btn btn-warning">Search</button>
+                           <button type="submit"  class="btn btn-primary btn-xl page-scroll" >Search</button>
+                          
                              </form>
                           </div><!-- /row mt -->	    
                    </div><! --/row -->

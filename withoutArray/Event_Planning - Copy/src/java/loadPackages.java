@@ -38,12 +38,12 @@ public class loadPackages extends HttpServlet {
      response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-        String valSType= request.getParameter("valajax");
+        String valSName= request.getParameter("valajax");
         servicePackageHandling sDetails = new servicePackageHandling();
-        ResultSet sNames = sDetails.getAllServiceNames(valSType);
+        ResultSet sNames = sDetails.getAllPackageNames(valSName);
         while (sNames.next()){
-        String result = sNames.getString("SName");
-        response.getWriter().write("<option>"+result+"</option>");
+        String result = sNames.getString("PName");
+        response.getWriter().write("<option id='pName'>"+result+"</option>");
                 }
         }
     }

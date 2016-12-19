@@ -82,6 +82,21 @@ public class servicePackageHandling {
     
     }
     
+    public ResultSet getAllPackageNames (String service){
+     try{   
+
+    String sql= "select * from tblpackages where SName='"+service+"'; " ;
+    System.out.println(sql);
+    Statement stat = con.connection.createStatement();
+     resultset = stat.executeQuery(sql);
+    
+     }
+     catch (SQLException ex) {
+            Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return resultset;
+    }
+    
     public void SaveImages(String service, String ImageURI){
     try {
             sqlStatement = con.connection.prepareStatement("INSERT INTO tblpckimages(ServiceID,ImagePath) VALUES (?,?)");

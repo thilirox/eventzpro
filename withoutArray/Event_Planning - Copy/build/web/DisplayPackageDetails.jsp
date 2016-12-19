@@ -80,8 +80,8 @@
               Contact = resultServiceDetails.getInt("CNumber");
               Email=resultServiceDetails.getString("email");
               Address=resultServiceDetails.getString("Address");
-              City= resultServiceDetails.getString("City");
-              Province = resultServiceDetails.getString("Province");
+              
+              
              
               }    
              
