@@ -190,7 +190,7 @@ else if ("customer".equals(usertype)) { %>
 					  		 <p>Update profile</p>
                   		</div>
                                                       </a>
-                         <a href="ManualPKSearch.jsp" >
+                         <a href="manualPKSearch.jsp" >
                   		<div class="col-md-2 col-sm-2 box0">
                   			<div class="box1">
 					  			<span class="glyphicon glyphicon-search"></span>
@@ -199,7 +199,7 @@ else if ("customer".equals(usertype)) { %>
 					  			<p>Search Services </p>
                   		</div>
                                </a>
-                         <a href="AutomaticPG.jsp">
+                         <a href="automaticPG.jsp">
                   		<div class="col-md-2 col-sm-2 box0">
                   			<div class="box1">
 					  			<span class="glyphicon glyphicon-gift"></span>

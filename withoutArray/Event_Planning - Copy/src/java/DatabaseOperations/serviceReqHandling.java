@@ -71,7 +71,6 @@ public class serviceReqHandling {
     } 
    public ResultSet getCustomerReq(String service, String ReqID){
   
-    
      try{   
 
     String sql= "select * from tblservicereq where ServiceID= '"+ service  +"' AND ReqId= '"+ReqID+"' ; " ;

@@ -52,6 +52,35 @@ public class servicePackageHandling {
     return resultset;
     }
     
+    public ResultSet getAllServiceTypes(){
+     try{
+
+    String sql= "select DISTINCT Type from tblservices; " ;
+    System.out.println(sql);  
+    Statement stat = con.connection.createStatement();
+     resultset = stat.executeQuery(sql);
+     }
+     catch (SQLException ex) {
+            Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return resultset;
+    
+    }
+    
+    public ResultSet getAllServiceNames(String sType){
+     try{
+
+    String sql= "select DISTINCT SName from tblservices where Type= '"+sType+"';" ;
+    System.out.println(sql);  
+    Statement stat = con.connection.createStatement();
+     resultset = stat.executeQuery(sql);
+     }
+     catch (SQLException ex) {
+            Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return resultset;
+    
+    }
     
     public void SaveImages(String service, String ImageURI){
     try {

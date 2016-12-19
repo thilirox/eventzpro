@@ -229,7 +229,7 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Login  or Sign Up!</h2>
-                <a href="UserRegistration.jsp" class="btn btn-default btn-xl sr-button">Register Now</a>
+                <a href="userRegistration.jsp" class="btn btn-default btn-xl sr-button">Register Now</a>
             </div>
         </div>
     </aside>
