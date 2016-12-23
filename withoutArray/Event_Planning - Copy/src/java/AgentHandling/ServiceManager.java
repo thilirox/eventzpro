@@ -59,7 +59,7 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
     public void CreateAgentsWithRules() throws SQLException, IOException, ParserConfigurationException, SAXException {
         try {
             
-            String xmlFileName = "D://myFiles/JADEagent/withoutArray/Event_Planning - Copy/ServiceAgent.xml";
+            String xmlFileName = "F:\\thilifiles\\eventzpro.co.nf\\withoutArray\\Event_Planning - Copy\\ServiceAgent.xml";
 
             //.......................................................................
             File inputFile = new File(xmlFileName);

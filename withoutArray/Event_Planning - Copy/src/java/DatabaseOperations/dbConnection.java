@@ -20,7 +20,7 @@ public class dbConnection
 {
     
     Properties properties = new Properties();
-    String URL = "jdbc:mysql://localhost:3306/eventz?autoReconnect=true&useSSL=false";
+    String URL = "jdbc:mysql://localhost:3306/eventPlanning?autoReconnect=true&useSSL=false";
     String USERNAME="root";
     String PASSWORD="Princess@2008"; 
     Connection connection ;
