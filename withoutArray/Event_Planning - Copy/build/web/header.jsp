@@ -15,11 +15,10 @@
             <a href="index.html" class="logo"><b>EVENTZ</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
-              
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="HomePage.jsp">Logout</a></li>
+                    <li><a class="logout" href="index.jsp">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -30,14 +29,14 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               <%
-                      String uname = session.getAttribute("userName").toString();
+                   //   String uname = session.getAttribute("userName").toString();
                       %>
               	  
               	 <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered"><%=uname %></h5>
+              	  <h5 class="centered"><%//=uname %></h5>
               	  	
                   <li class="mt">
-                      <a class="active" href="index.html">
+                      <a class="active" href="index.jsp">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>

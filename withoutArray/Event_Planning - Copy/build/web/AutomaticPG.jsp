@@ -7,16 +7,15 @@
 <%@page import="DatabaseOperations.agentOutputHandling"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
     <head>
-       <%@include file="headerScripts.jsp" %>
+        <%@include file="headerScripts.jsp" %>
         <script type="text/javascript" >
             function hotelrange() {
                 swal({
                     title: "Hotel <small>Ranges</small>!",
                     text: "A custommessage.",
-                            html: true
+                    html: true
                 });
 
             }
@@ -26,10 +25,10 @@
 
     <body>
         <% agentOutputHandling obj = new agentOutputHandling();
-            obj.clearResults();  %>
+            obj.clearResults();%>
 
         <section id="container" >
-          <%@include file="header.jsp" %>
+            <%@include file="header.jsp" %>
             <!-- **********************************************************************************************************************************************************
             MAIN CONTENT
             *********************************************************************************************************************************************************** -->
@@ -118,6 +117,6 @@
             <%@include file="footer.jsp" %>
             <!--footer end-->
         </section>
-       <%@include file="footerScripts.jsp" %>
+        <%@include file="footerScripts.jsp" %>
     </body>
 </html>
