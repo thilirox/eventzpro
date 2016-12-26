@@ -13,21 +13,16 @@
         <%@include file="headerScripts.jsp" %>
          <script >
              function saveMessage(){
-                 
-                 
                  var to = document.getElementById('to').value;
                  var header = document.getElementById('header').value;
                  var body = document.getElementById('content').value;
                  if (to !== "" && header !== "" && body !==""){
                     // alert("feilds cannot be empty");
-                 
-                
                  var xhttp = new XMLHttpRequest();
                  xhttp.onreadystatechange= function(){
                      if(xhttp.readyState===4 & xhttp.status===200){
                         swal("Success!", "Submitted the message successfully!", "success");
-
-                     }
+                    }
                  };
                  xhttp.open("POST","addCusMessage?valto="+to+"&valheader="+header+"&valbody="+body,true);
                  xhttp.send();
@@ -47,7 +42,7 @@
                     <div class="row">
                         <div class="col-lg-9 main-chart">
                             <div class="row mtbox">
-                                <h2 class="section-heading" style="color: black" >  Leave a message </h2>   
+                                <h2 class="section-heading" style="color: black" > Leave a message </h2>   
                                                                <br>
                                 <form >
 
