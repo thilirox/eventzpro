@@ -59,7 +59,7 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
     public void CreateAgentsWithRules() throws SQLException, IOException, ParserConfigurationException, SAXException {
         try {
             
-            String xmlFileName = "D://myFiles/JADEagent/withoutArray/Event_Planning - Copy/ServiceAgent.xml";
+            String xmlFileName = "F:\\thilifiles\\eventzpro.co.nf\\withoutArray\\Event_Planning - Copy\\ServiceAgent.xml";
 
             //.......................................................................
             File inputFile = new File(xmlFileName);
@@ -112,7 +112,7 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
                     String pName = eElement.getAttribute("package");
 
                     agents[temp2 + x + 1] = new ServiceAgent(name, pName, Pprice, "masmt", "Photography", (temp2 + x + 2));
-                    System.out.println("nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
+                  
                 }
             }
             for (int temp3 = 0; temp3 < z; temp3++) {
@@ -193,7 +193,6 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
 
     @Override
     public void live() {
-
     }
 
     @Override

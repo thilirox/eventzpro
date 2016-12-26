@@ -11,24 +11,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    
-
-    <title>e -Eventz</title>
-
+        <title>e -Eventz</title>
      <%@include file="headerScripts.jsp" %>
-    <script type="text/javascript">
-           function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-             });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-}
-    </script>
+    
     <script type="text/javascript">
     
     document.getElementById("request").onclick = function () {
@@ -42,11 +27,9 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
   <body>
-
   <%@include file="header.jsp" %>
-      
+   
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -66,7 +49,8 @@
              String Address="" ;
              String City="" ;
              String Province= "" ;
-            
+             String lat = "";
+             String longt = "";
              String Service = request.getParameter("Service").replaceAll("\\s","");
              String Package = request.getParameter("Package").replaceAll("\\s","");
              session.setAttribute("Service", Service);
@@ -80,13 +64,13 @@
               Contact = resultServiceDetails.getInt("CNumber");
               Email=resultServiceDetails.getString("email");
               Address=resultServiceDetails.getString("Address");
+              lat=resultServiceDetails.getString("Latitude");
+              longt=resultServiceDetails.getString("Longitute");
+               }  
               
-              
-             
-              }    
-             
-    
              %>
+             <input type="hidden" id="lati" value="<%=lat %>" />
+             <input type="hidden" id="longtitude" value="<%=longt %>" />
              <table style="width: 100%">
                  <tr>
                      <td>
@@ -112,6 +96,21 @@
              </div>
                    </td>
                    <td>
+                       <script type="text/javascript">
+           function initMap() {
+             var lati = parseFloat(document.getElementById('lati').value);
+             var longti=parseFloat( document.getElementById('longtitude').value);
+        var uluru = {lat:lati,lng: longti};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+             });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+}
+    </script>
                         
             <div class="col-lg-12 text-right" style="height: 400px; width:600px " id="map">       
                        
@@ -124,52 +123,22 @@
                   <a href="CustomerRequest.jsp" >Submit a request</a>
                   
                   	</div><!-- /row mt -->	
-                  
-                      
-                  
-                  
-                  
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->                  
-                  
-                  
-              </div><! --/row -->
+                </div><! --/row -->
           </section>
       </section>
 
       <!--main content end-->
       <!--footer start-->
-      <footer class="site-footer">
-          <div class="text-center">
-             EventZ@2016
-              <a href="index.html#" class="go-top">
-                  <i class="fa fa-angle-up"></i>
-              </a>
-          </div>
-      </footer>
+      <%@include file="footer.jsp" %>
       <!--footer end-->
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/jquery-1.8.3.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="assets/js/jquery.sparkline.js"></script>
-
-
-    <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
-    
-    <script type="text/javascript" src="assets/js/gritter/js/jquery.gritter.js"></script>
-    <script type="text/javascript" src="assets/js/gritter-conf.js"></script>
-
-    <!--script for this page-->
-    <script src="assets/js/sparkline-chart.js"></script>    
-    <script src="assets/js/zabuto_calendar.js"></script>
+   
+    <%@include file="footerScripts.jsp" %>
           <!-- Gmap API -->              
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8Kt4W7XfkrRObsgWdDbRjhN_BGhr0aJE&callback=initMap">

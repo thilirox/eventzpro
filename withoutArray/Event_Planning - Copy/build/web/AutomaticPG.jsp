@@ -7,36 +7,36 @@
 <%@page import="DatabaseOperations.agentOutputHandling"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
     <head>
-       <%@include file="headerScripts.jsp" %>
+        <%@include file="headerScripts.jsp" %>
         <script type="text/javascript" >
             function hotelrange() {
                 swal({
                     title: "Hotel <small>Ranges</small>!",
                     text: "A custommessage.",
-                            html: true
+                    html: true
                 });
-
-            }
-
+            },
+             function validateDate(){
+                 if(document.getElementById('').onchange)
+                 
+             }
         </script>
     </head>
 
     <body>
         <% agentOutputHandling obj = new agentOutputHandling();
-            obj.clearResults();  %>
+            obj.clearResults();%>
 
         <section id="container" >
-          <%@include file="header.jsp" %>
+            <%@include file="header.jsp" %>
             <!-- **********************************************************************************************************************************************************
             MAIN CONTENT
             *********************************************************************************************************************************************************** -->
             <!--main content start-->
             <section id="main-content">
                 <section class="wrapper">
-
                     <div class="row">
                         <div class="col-lg-9 main-chart">
                             <div class="row mtbox">
@@ -44,28 +44,23 @@
                                 <h3 class="section-heading">  Enter Your Request </h3>
                                 <br>
                                 <form  action="agentResultTimer.jsp" method="POST">
-
                                     <input class="form-control" type="text" value="Enter your budget" name="txtbudget">
                                     <br>
                                     <input class="form-control" type="text" value="No of guests" name="txtguest">
                                     <br>
-
                                     <br>
                                     <h3 class="section-heading">  Choose the services you need for your package </h3>
                                     <br>
                                     <fieldset id="1">
                                         <h4>  Hotels </h4> 
                                         <div class="checkbox-inline">
-                                            <label><input type="checkbox" name="id" value="HotelFiveStar"> Five Star</label>
-
+                                            <label><input type="checkbox" name="id" value="HotelFiveStar" onchange=""> Five Star</label>
                                         </div>
                                         <div class="checkbox-inline">
                                             <label><input type="checkbox"  name="id" value="HotelFourStar"> Four Star</label>
-
                                         </div>
                                         <div class="checkbox-inline">
                                             <label><input type="checkbox"  name="id" value="HotelOther"> Other</label>
-
                                         </div>
                                     </fieldset>
                                     <button type="button" class="btn btn-primary btn-sm"  onclick="hotelrange()">Range Info</button>
@@ -106,8 +101,11 @@
                                         </div>
                                         <br>
                                     </fieldset>
+                                    <button onclick="validateData()" class="btn btn-warning" > Get Price Ranges </button>
+                                    <div id="validator">
                                     <button type="submit"  class="btn btn-warning" >Search</button>
                                     <br>
+                                    </div>
                                 </form>
                             </div><!-- /row mt -->	                        
                         </div><! --/row -->
@@ -118,6 +116,6 @@
             <%@include file="footer.jsp" %>
             <!--footer end-->
         </section>
-       <%@include file="footerScripts.jsp" %>
+        <%@include file="footerScripts.jsp" %>
     </body>
 </html>

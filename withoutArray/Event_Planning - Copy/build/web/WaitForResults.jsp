@@ -44,31 +44,24 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
   <body>
-
   <section id="container" >
       <%
-
 String select[] = request.getParameterValues("id");
 String header="";
 int headersize = select.length;
 String totalSelection="";
 if (select != null && select.length != 0) {
-
 for (int i = 0; i < select.length; i++) {
 totalSelection = totalSelection+select[i];
 }
-
 System.out.println(totalSelection);
 }
 for (int i = 0; i < select.length-1 ; i++) {
 header = header+"join_sales";
 }
-
 %>
-    
-    <!-- Agent Activation -->
+        <!-- Agent Activation -->
  <% 
      
    //  outputFormating format= new outputFormating();
@@ -76,9 +69,7 @@ header = header+"join_sales";
     String guestIn = request.getParameter("txtguest");
     System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"+guestIn);
     int guest = Integer.parseInt(guestIn);
-    
     ServiceManager manager = new ServiceManager(budgetIn,guest,totalSelection,header );
-    
     manager.start(); 
    // CustomerAgent customer = new CustomerAgent();
    // ArrayList OutList = ArrayOut.LIST;
@@ -169,12 +160,7 @@ header = header+"join_sales";
                        <a href="displayPackagesII.jsp" >Click here</a>
                        </div>
                   	</div><!-- /row mt -->	
-                  
-                      
-                  
-                  
-                  
-      <!-- **********************************************************************************************************************************************************
+     <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->                  
                   
