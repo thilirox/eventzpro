@@ -97,6 +97,26 @@ public class servicePackageHandling {
     return resultset;
     }
     
+    public int getMinPackageRange (String packageRange ){
+        int minvalue = 0;
+     try{   
+         
+    String sql= "SELECT min(MinOffer) as minVal FROM tblpackages  where PackRange='"+packageRange+"'; " ;
+    System.out.println(sql);
+    Statement stat = con.connection.createStatement();
+     resultset = stat.executeQuery(sql);
+     while (resultset.next()){
+         minvalue = resultset.getInt("minVal");
+     
+     }
+    
+     }
+     catch (SQLException ex) {
+            Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return minvalue;
+    }
+    
     public void SaveImages(String service, String ImageURI){
     try {
             sqlStatement = con.connection.prepareStatement("INSERT INTO tblpckimages(ServiceID,ImagePath) VALUES (?,?)");

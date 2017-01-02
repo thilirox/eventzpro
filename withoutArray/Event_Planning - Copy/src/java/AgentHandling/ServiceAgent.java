@@ -57,6 +57,7 @@ System.out.println("[Active] .... " + super.agent);
           String input = tempmes.content;
           final String result = stripNonDigits(input);
           System.out.println("value:"+value + "price:"+price);
+          
           if(value>price)
           value = Float.parseFloat(result);
           {

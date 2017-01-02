@@ -1,0 +1,40 @@
+SMAP
+automaticPG_jsp.java
+JSP
+*S JSP
+*F
++ 0 automaticPG.jsp
+automaticPG.jsp
++ 1 headerScripts.jsp
+headerScripts.jsp
++ 2 header.jsp
+header.jsp
++ 3 footer.jsp
+footer.jsp
++ 4 footerScripts.jsp
+footerScripts.jsp
+*L
+5,6:55
+10:60,2
+11,5:62
+5#1,20:67
+25,2:87,3
+27,7:93
+15#0,87:99
+101,2:186
+102,2:188
+103,14:190
+116:204
+117,11:205,3
+128,2:238
+5#2,27:240
+33:269,2
+34,2:271
+36:273,3
+37,36:276
+129#0,94:311
+5#3,13:405
+222#0,4:417
+5#4,25:421
+225#0,4:445
+*E
