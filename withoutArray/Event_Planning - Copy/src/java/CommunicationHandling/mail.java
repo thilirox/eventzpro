@@ -12,7 +12,7 @@ import javax.mail.internet.*;
 public class mail
 {
      public void notifyServiceProvider(String mailAdd){
-         String Content= "your have new order";
+         String Content= "your have new order please refer EVENTZ.";
          String title="new order";
          
          sendmail(mailAdd,title,Content);
@@ -20,7 +20,7 @@ public class mail
         
         public void notifyCustomerProvider(String mailAdd){
         
-          String Content= "your have a reply from service provider";
+          String Content= "your have a reply from service provider. Please check your service orders from EVENTZ";
          String title="reply from service provider";
          
          sendmail(mailAdd,title,Content);

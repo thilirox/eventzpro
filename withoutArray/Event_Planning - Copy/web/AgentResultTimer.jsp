@@ -40,7 +40,7 @@ if(totalSelection.contains("Photography")){
 if(totalSelection.contains("decorations")){
     x=x+1;
 }
-if(totalSelection.contains("Music")){
+if(totalSelection.contains("music")){
     x=x+1;
 }
 if(totalSelection.contains("Catering")){
@@ -56,8 +56,7 @@ header = header+"join_sales";
  <% 
      
    //  outputFormating format= new outputFormating();
-    String budgetIn
- = request.getParameter("txtbudget"); 
+    String budgetIn = request.getParameter("txtbudget"); 
     String guestIn = request.getParameter("txtguest");
     System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"+guestIn);
     int guest = Integer.parseInt(guestIn);
@@ -83,7 +82,7 @@ header = header+"join_sales";
               <div class="row">
                   <div class="col-lg-9 main-chart">
                         <div class="row mtbox">
-                            <h2 class="section-heading" style="color: black" >   </h2>   
+                            <h2 class="section-heading" style="color: black" > Please Wait....  </h2>   
                   
                       <br>
                       
@@ -91,7 +90,7 @@ header = header+"join_sales";
                           function Redirect() {
                             window.location="displayPackages.jsp";
                          }
-                         setTimeout('Redirect()', 10000);
+                         setTimeout('Redirect()', 40000);
                           swal({
                             title: "Request Processed!",
                             text: "Please wait a while till our agents create packages for You",
@@ -104,30 +103,14 @@ header = header+"join_sales";
                        
                       
                       
-                  	</div><!-- /row mt -->	
-                  
-                      
-                  
-                  
-                  
+                  	</div><!-- /row mt -->
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT
       *********************************************************************************************************************************************************** -->                  
-                  
-                  
-              </div><! --/row -->
+        </div><! --/row -->
           </section>
       </section>
-      
-      
   </section>
-
       <%@include file="footerScripts.jsp" %>	
-	
-
-	
-	
-  
-
-  </body>
+	 </body>
 </html>

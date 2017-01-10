@@ -47,7 +47,7 @@
             var calipso = document.getElementById("MusicCalipso");
             var dj = document.getElementById("MusicDJ");
             var classic = document.getElementById("MusicClassic");
-            var catering = document.getElementById("Catering");
+            var catering = document.getElementById("catering");
             
             var minRequirement = 0 ;
             if(hotelFvStar.checked){
@@ -111,7 +111,7 @@
             int MinClassic = minrange.getMinPackageRange("Classic");
             int MinCalipso = minrange.getMinPackageRange("Calipso");
             int MinDJ = minrange.getMinPackageRange("DJ");
-            int Catering = minrange.getMinPackageRange("Catering");
+            int Catering = minrange.getMinPackageRange("catering");
             
             %>
             <input   type="hidden" id="MinFvHotel" value="<%=MinFvHotel %>" >
@@ -161,37 +161,37 @@
                                     <fieldset id="2">
                                         <h4>  Photography </h4>
                                         <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" id="PhotographyPremium" value="PhotographyPremium">Premium</label>
+                                            <label><input type="checkbox"  name="id" id="PhotographyPremium" value="PhotographyPrePho">Premium</label>
                                         </div>
                                         <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" id="PhotographyNormal" value="PhotographyNormal">Normal</label>
+                                            <label><input type="checkbox"  name="id" id="PhotographyNormal" value="PhotographyNorPho">Normal</label>
                                         </div>
                                     </fieldset>
                                     <fieldset>
                                         <h4> Decorations </h4>
                                         <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" id="decorationsPremium" value="decorationsPremium">Premium</label>
+                                            <label><input type="checkbox"  name="id" id="decorationsPremium" value="decorationsPreDeco">Premium</label>
                                         </div>
                                         <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" id="decorationsNormal" value="decorationsNormal">Normal</label>
+                                            <label><input type="checkbox"  name="id" id="decorationsNormal" value="decorationsNorDeco">Normal</label>
                                         </div>
                                     </fieldset>
                                     <fieldset>
                                         <h4> Music And Sounds </h4>
                                         <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" id="MusicClassic" value="MusicClassic">Classic</label>
+                                            <label><input type="checkbox"  name="id" id="MusicClassic" value="musicClassic">Classic</label>
                                         </div>
                                         <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" id="MusicCalipso" value="MusicCalipso">Calipso</label>
+                                            <label><input type="checkbox"  name="id" id="MusicCalipso" value="musicCalipso">Calipso</label>
                                         </div>
                                         <div class="checkbox-inline">
-                                            <label><input type="checkbox"  name="id" id="MusicDJ" value="MusicDJ">DJ</label>
+                                            <label><input type="checkbox"  name="id" id="MusicDJ" value="musicDJ">DJ</label>
                                         </div>
                                     </fieldset>
                                     <fieldset>
                                         <h4>Other </h4>
                                         <div class="checkbox-inline">
-                                            <label><input type="checkbox" name="id" id="Catering" value="Catering">Cutlary and Catering</label>
+                                            <label><input type="checkbox" name="id" id="catering" value="catering">Cutlary and Catering</label>
                                         </div>
                                        
                                         <br>

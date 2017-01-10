@@ -8,6 +8,7 @@ package DatabaseOperations;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -34,8 +35,20 @@ public class customerMessages {
      Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, e);
    
    
-   }
+   }}
+      public ResultSet getCustomerMsg(String service) throws SQLException{
+    try{
+    String sql= "select * from cusmessage where MesTo= '"+ service +"'; " ;
+    System.out.println(sql);
+    Statement stat = con.connection.createStatement();
+     resultset = stat.executeQuery(sql);
+     }
+     catch (SQLException ex) {
+            Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return resultset;
+    }
           
     
     
-   }}
+   }

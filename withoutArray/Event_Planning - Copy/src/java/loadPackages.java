@@ -44,7 +44,8 @@ public class loadPackages extends HttpServlet {
         while (sNames.next()){
         String result = sNames.getString("PName");
         response.getWriter().write("<option id='pName'>"+result+"</option>");
-                }
+          
+        }
         }
     }
 

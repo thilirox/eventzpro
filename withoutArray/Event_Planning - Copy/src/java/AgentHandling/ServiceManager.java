@@ -36,20 +36,21 @@ import org.xml.sax.SAXException;
 public class ServiceManager extends masmt2.agent.MaSMTManager {
 
     MaSMTMessage tempmes;
-    
+
     public String budgetIn;
     public String cusSelect;
     String header;
     public int guestsIn;
+    
 
     public ServiceManager() {
         super();
     }
 
-    public ServiceManager(String budgetIn , int guestsIn , String cusSelect , String header ) {
+    public ServiceManager(String budgetIn, int guestsIn, String cusSelect, String header) {
         super();
         this.budgetIn = budgetIn;
-        this.guestsIn= guestsIn;
+        this.guestsIn = guestsIn;
         this.cusSelect = cusSelect;
         this.header = header;
         new Settings(50, 100, 30);
@@ -58,7 +59,7 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
 
     public void CreateAgentsWithRules() throws SQLException, IOException, ParserConfigurationException, SAXException {
         try {
-            
+
             String xmlFileName = "F:\\thilifiles\\eventzpro.co.nf\\withoutArray\\Event_Planning - Copy\\ServiceAgent.xml";
 
             //.......................................................................
@@ -73,15 +74,15 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
             NodeList nList2 = doc.getElementsByTagName("photography");
             NodeList nList3 = doc.getElementsByTagName("decorations");
             NodeList nList4 = doc.getElementsByTagName("music");
-            NodeList nList5 = doc.getElementsByTagName("Catering");
+            NodeList nList5 = doc.getElementsByTagName("catering");
             int x = nList1.getLength();
             int y = nList2.getLength();
             int z = nList3.getLength();
             int s = nList4.getLength();
             int p = nList5.getLength();
-            setNumberofClients(x + y + z+s+p + 1);
+            setNumberofClients(x + y + z + s + p + 1);
 
-            agents[0] = new CustomerAgent("masmt", "cus", 1, budgetIn,cusSelect, header);
+            agents[0] = new CustomerAgent("masmt", "cus", 1, budgetIn, cusSelect, header);
 
             for (int temp1 = 0; temp1 < x; temp1++) {
 
@@ -91,12 +92,13 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
 
                     org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode;
                     String name = eElement.getAttribute("name");
-                    Float Pprice = Float.parseFloat(eElement.getAttribute("up"));
+                    String Pprice = eElement.getAttribute("up");
                     String pName = eElement.getAttribute("package");
-                   
+                    String maxno = eElement.getAttribute("maxNo");
+                    String ServType = eElement.getAttribute("type");
 
-                   // agents[temp1 + 1] = new HotelAgent(name, pName, Pprice,"200",150, "masmt", "Hotel", (temp1 + 2));
-                   agents[temp1 + 1] = new ServiceAgent(name, pName, Pprice, "masmt", "Hotel", (temp1 + 2));
+                    agents[temp1 + 1] = new HotelAgent(name, pName, Pprice,maxno,guestsIn,ServType, "masmt", "Hotel", (temp1 + 2));
+                   // agents[temp1 + 1] = new ServiceAgent(name, pName, Pprice, "masmt", "Hotel", (temp1 + 2));
                 }
             }
 
@@ -108,11 +110,12 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
 
                     org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode;
                     String name = eElement.getAttribute("name");
-                    Float Pprice = Float.parseFloat(eElement.getAttribute("up"));
+                    String Pprice = eElement.getAttribute("up");
                     String pName = eElement.getAttribute("package");
+                    String ServType = eElement.getAttribute("type");
 
-                    agents[temp2 + x + 1] = new ServiceAgent(name, pName, Pprice, "masmt", "Photography", (temp2 + x + 2));
-                  
+                    agents[temp2 + x + 1] = new ServiceAgent(name, pName, Pprice,ServType, "masmt", "Photography", (temp2 + x + 2));
+
                 }
             }
             for (int temp3 = 0; temp3 < z; temp3++) {
@@ -123,10 +126,11 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
 
                     org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode3;
                     String name = eElement.getAttribute("name");
-                    Float Pprice = Float.parseFloat(eElement.getAttribute("up"));
+                    String Pprice = eElement.getAttribute("up");
                     String pName = eElement.getAttribute("package");
+                    String ServType = eElement.getAttribute("type");
 
-                    agents[temp3 + x + y + 1] = new ServiceAgent(name, pName, Pprice, "masmt", "decorations", (temp3 + x + y + 2));
+                    agents[temp3 + x + y + 1] = new ServiceAgent(name, pName, Pprice,ServType, "masmt", "decorations", (temp3 + x + y + 2));
 
                 }
             }
@@ -138,10 +142,11 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
 
                     org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode4;
                     String name = eElement.getAttribute("name");
-                    Float Pprice = Float.parseFloat(eElement.getAttribute("up"));
+                    String Pprice = eElement.getAttribute("up");
                     String pName = eElement.getAttribute("package");
+                    String ServType = eElement.getAttribute("type");
 
-                    agents[temp4 + x + y+z + 1] = new ServiceAgent(name, pName, Pprice, "masmt", "Music", (temp4 + x + y+z + 2));
+                    agents[temp4 + x + y + z + 1] = new ServiceAgent(name, pName, Pprice,ServType, "masmt", "music", (temp4 + x + y + z + 2));
 
                 }
             }
@@ -153,22 +158,22 @@ public class ServiceManager extends masmt2.agent.MaSMTManager {
 
                     org.w3c.dom.Element eElement = (org.w3c.dom.Element) nNode5;
                     String name = eElement.getAttribute("name");
-                    Float Pprice = Float.parseFloat(eElement.getAttribute("up"));
+                    String Pprice = eElement.getAttribute("up");
                     String pName = eElement.getAttribute("package");
+                    String ServType = eElement.getAttribute("type");
 
-                    agents[temp5+s + x + y+z + 1] = new ServiceAgent(name, pName, Pprice, "masmt", "Catering", (temp5+s + x + y+z + 2));
+                    agents[temp5 + s + x + y + z + 1] = new ServiceAgent(name, pName, Pprice,ServType, "masmt", "catering", (temp5 + s + x + y + z + 2));
 
                 }
             }
-        }
-             catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         activeAllClients();
         activeMessageParsing();
         //setLive(false);
-        
+
 //   activeTCPServer();
     }
 

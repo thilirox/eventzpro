@@ -2,28 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/EditProfileUser.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/FindPackages.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/DatabaseOperations/servicePackageHandling.java</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/com/dhtmlx/demo/EventsManager.java</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/displayPackages.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/DatabaseOperations/dbConnection.java</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/WaitForResults.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/newServiceOrders.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/automaticPG.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/agentResultTimer.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/AgentHandling/ServiceManager.java</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/customerMessages.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/AgentHandling/HotelAgent.java</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/addCusMessage.java</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/manualPKSearch.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/header.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/DatabaseOperations/customerMessages.java</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/DisplayPackageDetails.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/footer.jsp</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/src/java/loadPackages.java</file>
-            <file>file:/F:/thilifiles/eventzpro.co.nf/withoutArray/Event_Planning%20-%20Copy/web/headerScripts.jsp</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

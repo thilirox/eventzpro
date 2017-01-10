@@ -5,6 +5,8 @@
 --%>
 
 
+<%@page import="java.sql.ResultSet"%>
+<%@page import="DatabaseOperations.servicePackageHandling"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% Class.forName("com.mysql.jdbc.Driver"); %>
 <!DOCTYPE html>
@@ -32,7 +34,7 @@
     </head>
     <body>
                 <section id="container" >
-            <%@include file="header.jsp" %>
+            <%@include file="headerServ.jsp" %>
             <!-- **********************************************************************************************************************************************************
             MAIN CONTENT
             *********************************************************************************************************************************************************** -->
@@ -45,8 +47,15 @@
                                 <h2 class="section-heading" style="color: black" > Leave a message </h2>   
                                                                <br>
                                 <form >
-
-                                    <input class="form-control" type="text" id="to" placeholder = "directed to: Admin" required>
+                                    <% servicePackageHandling obj = new servicePackageHandling();
+                                   ResultSet sTypes = obj.getServiceNames(); %>
+                                 Directed to :
+                                    <select class="form-control" id="to"  name="type" onchange="getservices()" >
+                                    <% while (sTypes.next()){
+                                        String serviceType= sTypes.getString("SName"); %>
+                                    <option  value="<%=serviceType %>"><%=serviceType %></option>
+                                    <%} %>
+                                </select>
                                     <br>
                                     <input class="form-control" type="text" id="header" placeholder = "message heading" required>
                                     <br>

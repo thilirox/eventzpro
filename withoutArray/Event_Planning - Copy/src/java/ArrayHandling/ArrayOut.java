@@ -33,7 +33,6 @@ public final class ArrayOut {
     public ArrayList getList() {
         return List;
     }
-
     /**
      * @param List the List to set
      */

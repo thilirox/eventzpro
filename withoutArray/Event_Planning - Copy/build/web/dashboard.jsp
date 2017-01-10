@@ -95,7 +95,7 @@
            
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="login.html">Logout</a></li>
+                    <li><a class="logout" href="index.jsp">Logout</a></li>
             	</ul>
             </div>
         </header>
@@ -181,7 +181,7 @@ else if ("customer".equals(usertype)) { %>
                      <br/>
                  <div class="row">	
                      <div class="row mtbox">
-                         <a href="EditProfileUser.jsp" >
+                         <a href="registerUser.jsp" >
                   		<div class="col-md-2 col-sm-2 col-md-offset-1 box0">
                   			<div class="box1">
 					  			<span class="glyphicon glyphicon-user"></span>
@@ -218,16 +218,15 @@ else if ("customer".equals(usertype)) { %>
 					  			<p>Request Status </p>
                   		</div>
                          </a>
-                         
-                  		<div class="col-md-2 col-sm-2 box0">
+                         <a href="customerMessages.jsp">
+                                           		<div class="col-md-2 col-sm-2 box0">
                   			<div class="box1">
 					  			<span class="glyphicon glyphicon-envelope"></span>
-                                                                <% String timeStamp2 = new SimpleDateFormat("yy-MM-dd").format(Calendar.getInstance().getTime());%>
-					  			<br/>
+                                                                <br/>
                   			</div>
 					  			<p>Leave a Message.</p>
                   		</div>
-                  	
+                         </a>
                   	</div>
                   </div>
                  </div>
@@ -279,16 +278,10 @@ else if ("customer".equals(usertype)) { %>
 
     <!-- Theme JavaScript -->
     <script src="${pageContext.request.contextPath}/style/js/creative.min.js"></script>
-    
-     <script class="include" type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script class="include" type="text/javascript" src="${pageContext.request.contextPath}/assets/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/jquery.scrollTo.min.js"></script>
     <script src="${pageContext.request.contextPath}/assets/js/jquery.nicescroll.js" type="text/javascript"></script>
     <script src="${pageContext.request.contextPath}/assets/js/jquery.sparkline.js"></script>
-
-
- 
-   
-    
     <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/gritter/js/jquery.gritter.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/gritter-conf.js"></script>
 

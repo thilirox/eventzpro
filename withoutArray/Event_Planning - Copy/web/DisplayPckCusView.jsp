@@ -123,7 +123,7 @@
                   	        
         <% 
          // dbConnection con = new dbConnection();  
-        String serviceName= "HotelGaladari";
+      //  String serviceName= "HotelGaladari";
         String CusId = session.getAttribute("userID").toString();
         
        serviceReqHandling obj= new serviceReqHandling();

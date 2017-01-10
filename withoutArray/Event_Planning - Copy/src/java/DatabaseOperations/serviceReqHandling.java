@@ -148,7 +148,7 @@ public class serviceReqHandling {
     }
    public ResultSet getServiceCompleted(String service) throws SQLException{
     try{
-    String sql= "select * from tblservicereq where ServiceID= '"+ service  +"' AND ReqStatus= 'Completed'; " ;
+    String sql= "select * from tblservicereq where ServiceID= '"+ service  +"' AND ReqStatus= 'Complete'; " ;
     System.out.println(sql);
     Statement stat = con.connection.createStatement();
      resultset = stat.executeQuery(sql);

@@ -40,8 +40,8 @@
               <div class="row">
                   <div class="col-lg-9 main-chart">
                         <div class="row mtbox">
-                            <h2 class="section-heading" style="color: black" >  Package Generator </h2>   
-                  <h3 class="section-heading">  Enter Your Request </h3>
+                            <h2 class="section-heading" style="color: black" >  Package Description </h2>   
+                  
                       <br>
                   	<%   String Owner="";
              int Contact=0;
@@ -51,6 +51,7 @@
              String Province= "" ;
              String lat = "";
              String longt = "";
+             String Weburl ="";
              String Service = request.getParameter("Service").replaceAll("\\s","");
              String Package = request.getParameter("Package").replaceAll("\\s","");
              session.setAttribute("Service", Service);
@@ -66,6 +67,7 @@
               Address=resultServiceDetails.getString("Address");
               lat=resultServiceDetails.getString("Latitude");
               longt=resultServiceDetails.getString("Longitute");
+              Weburl =resultServiceDetails.getString("WebsiteURL");
                }  
               
              %>
@@ -74,24 +76,31 @@
              <table style="width: 100%">
                  <tr>
                      <td>
-            <div class="col-lg-12 text-left"> 
+            <div style="height: 400px; width:400px " class="col-lg-12 text-left"> 
              
-                 Service: <%=Service %>  </br>
-                 Package: <%=Package %>  </br>
-                 Owner : <%=Owner %> </br>
-                Address: <p>  <%=Address %> </p>
-                 Contact Number: <p>(+94)<%=Contact %> </p>
+                <h5>   Service: <%=Service %>  </br></br>
+                 Package: <%=Package %>  </br></br>
+                 Owner : <%=Owner %> </br></br>
+                Address: <p>  <%=Address %> </p></br>
+                 Contact Number: <p>(+94)<%=Contact %> </p> </br>
                   
                   <p> Package Includes Following Services:  </p>
-                   <ul >
+                  <div>
+                   <ol >
                  <% 
                   while(resultPackagedetails.next()){
                     String Options = resultPackagedetails.getString("OptionDes"); %>
                     <li>  <%=Options %> </li>
                  <%
                     }
-                 %>
-                   </ul> 
+                 if(Weburl != null){
+                 %> 
+                    
+                    For more details visit <%=Weburl %>
+                    
+                    <%} %>
+                   </ol>
+                  </div></h5>
                    <br/> <br/>       
              </div>
                    </td>
@@ -118,10 +127,14 @@
                    </td>
                  </tr>
              </table>
-                  <button type="button" class="btn btn-warning" id="gallery" >View Image Galary</button>  
-                  <button type="button" class="btn btn-warning" id="request">Submit a request</button>
-                  <a href="CustomerRequest.jsp" >Submit a request</a>
-                  
+                   <br>
+                   <br>
+                   <div>
+                       <br>
+                       <br>
+                       <a href="ServiceImageGallery.jsp" >  Click here to view image gallery of <%=Service %> </a> <br>
+                       Interested! Then click here to place a request:  <a href="CustomerRequest.jsp" >Submit a request</a>
+                  </div>
                   	</div><!-- /row mt -->	
       <!-- **********************************************************************************************************************************************************
       RIGHT SIDEBAR CONTENT

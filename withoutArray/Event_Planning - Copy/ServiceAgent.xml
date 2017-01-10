@@ -1,26 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <services>
 <hotels>
-<hotel package="Package01" up="150000" name="HotelGaladari" id="1" minno="200"  type="" maxNo=" "> hotel</hotel>
-<hotel package="Package02" up="125000" name="HotelKingsbury" id="2" minno="100" >hotel</hotel>
-<hotel package="Package01" up="35000" name="HotelChaya" id="3" minno="300">hotel</hotel>
+<hotel package="PackageSilver" up="5000" name="HotelGaladari" id="1" minno="200"  type="FiveStar" maxNo="300"> hotel</hotel>
+<hotel package="PackageGold" up="6000" name="HotelGaladari" id="1" minno="200"  type="FiveStar" maxNo="450"> hotel</hotel>
+<hotel package="PackageSuperior" up="4500" name="HotelRanmal" id="1" minno="200"  type="FourStar" maxNo="200"> hotel</hotel>
+<hotel package="PackageLite" up="2500" name="HotelRanmal" id="1" minno="350"  type="FourStar" maxNo="500"> hotel</hotel>
+
+<hotel package="PackagePlanitum" up="3750" name="HotelBlueWater" id="1" minno="400"  type="Other" maxNo="500"> hotel</hotel>
+<hotel package="PackageGold" up="2500" name="HotelBlueWater" id="1" minno="200"  type="Other" maxNo="500"> hotel</hotel>
+
+<hotel package="PackageGold" up="5000" name="HotelHikkaTranz" id="1" minno="200"  type="FourStar" maxNo="500"> hotel</hotel>
+<hotel package="PackageSilver" up="4250" name="HotelHikkaTranz" id="1" minno="300"  type="FourStar" maxNo="500"> hotel</hotel>
+
+<hotel package="PackageGold" up="3850" name="HotelGrandOriental" id="1" minno="200"  type="Other" maxNo="500"> hotel</hotel>
+<hotel package="PackageSilver" up="2250" name="HotelGrandOriental" id="1" minno="350"  type="Other" maxNo="500"> hotel</hotel>
+
+
+<hotel package="PackageGold" up="4500" name="HotelKingsbury" id="2" minno="100" type="FiveStar" maxNo="500" >hotel</hotel>
+<hotel package="Package01" up="3250" name="HotelChaya" id="3" minno="300" type="FourStar" maxNo="500" >hotel</hotel>
+<hotel package="Package02" up="3250" name="HotelChaya" id="3" minno="300" type="FourStar" maxNo="500" >hotel</hotel>
 
 </hotels>
 <photographys>
-<photography package="Package01" up="15000" name="StudioQuickPic" id="1">photography</photography>
-<photography package="Package02" up="25000" name="StudioLakdam" id="2">photography</photography>
+<photography package="BoosterPackage" up="150000" type="WedPrePho" name="StudioQuickPic" id="1"/> 
+<photography package="BoosterPackage" up="250000" type="WedPrePho" name="StudioLakdam" id="2" /> 
+<photography package="LitePackage" up="75000" type="wedNorPho" name="StudioQuickPic" id="1" /> 
+<photography package="LitePackage" up="125000" type="WedNorPho" name="StudioLakdam" id="2" /> 
 
+<photography package="LitePackage" up="250000" type="WedPrePho" name="Studio3000" id="2" /> 
+<photography package="BoosterPackage" up="150000" type="PrePho" name="StudioMangala" id="1"/>
+<photography package="LitePackage" up="100000" type="NorPho" name="StudioMangala" id="2" /> 
+
+<photography package="LitePackage" up="6000" type="NorPho" name="FlexusLabs" id="2" /> 
+<photography package="LitePackage" up="10000" type="NorPho" name="XtreamYouth" id="2" />
+<photography package="LitePackageII" up="7000" type="NorPho" name="FlexusLabs" id="2" />
+<photography package="LitePackageII" up="8000" type="NorPho" name="XtreamYouth" id="2" />
+<photography package="SuperPackage" up="7000" type="NorPho" name="FotoStation" id="2" />
+<photography package="SuperPackageII" up="8000" type="NorPho" name="FotoStation" id="2" />
 </photographys>
-<travelling>
-<travel package="Package01" up="15000" name="QuickCabs" id="1">travel</travel>
-<travel package="Package02" up="15000" name="KangarooCabs" id="1">travel</travel>
 
-</travelling>
 <decoration>
-<decorations package="Package01" up="15000" name="DECO01" id="1">deco</decorations>
-<decorations package="Package02" up="15000" name="DECO02" id="1">deco</decorations>
-
+<decorations package="PackagePremium" up="45000" name="DarshiniDeco" type= "PreDeco" id="1"> deco</decorations>
+<decorations package="PackageNormal" up="25000" name="DarshiniDeco"  type ="NorDeco" id="1"> deco</decorations>
+<decorations package="Package02" up="75000" name="LassanaFloraDecoo" type="PreDeco" id="1"> deco</decorations>
 </decoration>
+
+<musicServices>
+<music package="PackageFull" up="15000" name="DJService" type= "DJ" id="1"> deco</music> 
+<music package="PackageLite" up="7500" name="DJForYou" type= "DJ" id="1"> deco</music> 
+<music package="PackageOne" up="35000" name="SinhalaClassicGroup" type= "Classic" id="1"> deco</music> 
+<music package="PackageEntertainers" up="25000" name="MusicEntertainers" type= "Classic" id="1"> deco</music> 
+<music package="PackageCalipso" up="15000" name="CalipsoForYou" type= "Calypso" id="1"> deco</music> 
+<music package="PackageParty" up="10000" name="PartyTimeCalypso" type= "Calypso" id="1"> deco</music> 
+ </musicServices>
+ 
+ <CateringServices>
+<catering package="PackageGold" up="150000" name="SunilCaters" type= "catering" id="1"> deco</catering> 
+<catering package="PackageGold" up="75000" name="GalleCaters" type= "catering" id="1"> deco</catering> 
+<catering package="PackageGold" up="50000" name="DushanCaters" type= "catering" id="1"> deco</catering> 
+
+<catering package="PackageXPremium" up="250000" name="SunilCaters" type= "catering" id="1"> deco</catering> 
+<catering package="PackageXPremium" up="150000" name="GalleCaters" type= "catering" id="1"> deco</catering> 
+<catering package="PackageXPremium" up="100000" name="DushanCaters" type= "catering" id="1"> deco</catering> 
+ </CateringServices>
 
 
 </services>

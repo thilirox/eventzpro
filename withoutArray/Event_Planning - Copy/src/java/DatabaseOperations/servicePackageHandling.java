@@ -81,6 +81,20 @@ public class servicePackageHandling {
     return resultset;
     
     }
+       public ResultSet getServiceNames(){
+     try{
+
+    String sql= "select DISTINCT SName from tblservices;" ;
+    System.out.println(sql);  
+    Statement stat = con.connection.createStatement();
+     resultset = stat.executeQuery(sql);
+     }
+     catch (SQLException ex) {
+            Logger.getLogger(dbConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return resultset;
+    
+    }
     
     public ResultSet getAllPackageNames (String service){
      try{   
@@ -101,7 +115,7 @@ public class servicePackageHandling {
         int minvalue = 0;
      try{   
          
-    String sql= "SELECT min(MinOffer) as minVal FROM tblpackages  where PackRange='"+packageRange+"'; " ;
+    String sql= "SELECT min(PPrice) as minVal FROM tblpackages  where PackRange='"+packageRange+"'; " ;
     System.out.println(sql);
     Statement stat = con.connection.createStatement();
      resultset = stat.executeQuery(sql);

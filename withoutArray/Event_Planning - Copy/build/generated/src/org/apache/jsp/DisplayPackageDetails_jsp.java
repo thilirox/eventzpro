@@ -76,7 +76,6 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
       out.write("    <link href=\"assets/css/bootstrap.css\" rel=\"stylesheet\">\n");
       out.write("    <!--external css-->\n");
       out.write("    <link href=\"assets/font-awesome/css/font-awesome.css\" rel=\"stylesheet\" />\n");
-      out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/css/zabuto_calendar.css\">\n");
       out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/js/gritter/css/jquery.gritter.css\" />\n");
       out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/lineicons/style.css\">    \n");
       out.write("        <!-- Custom styles for this template -->\n");
@@ -140,24 +139,23 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
       out.write("              <ul class=\"sidebar-menu\" id=\"nav-accordion\">\n");
       out.write("              ");
 
-                   //   String uname = session.getAttribute("userName").toString();
-                      
-      out.write("\n");
+                    // String uname = session.getAttribute("userName").toString();
+                    // <h5 class="centered"><%=//uname 
+      out.write(" </h5>\n");
+      out.write("                      %>\n");
       out.write("              \t  \n");
       out.write("              \t <p class=\"centered\"><a href=\"profile.html\"><img src=\"assets/img/ui-sam.jpg\" class=\"img-circle\" width=\"60\"></a></p>\n");
-      out.write("              \t  <h5 class=\"centered\">");
-//=uname 
-      out.write("</h5>\n");
+      out.write("              \t \n");
       out.write("              \t  \t\n");
       out.write("                  <li class=\"mt\">\n");
-      out.write("                      <a class=\"active\" href=\"index.jsp\">\n");
+      out.write("                      <a  href=\"index.jsp\">\n");
       out.write("                          <i class=\"fa fa-dashboard\"></i>\n");
       out.write("                          <span>Dashboard</span>\n");
       out.write("                      </a>\n");
       out.write("                  </li>\n");
       out.write("\n");
       out.write("                  <li class=\"sub-menu\">\n");
-      out.write("                      <a href=\"javascript:;\" >\n");
+      out.write("                      <a href=\"registerUser.jsp\" >\n");
       out.write("                          <i class=\"fa fa-user\"></i>\n");
       out.write("                          <span>Edit Profile</span>\n");
       out.write("                      </a>\n");
@@ -165,13 +163,20 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
       out.write("                  </li>\n");
       out.write("\n");
       out.write("                  <li class=\"sub-menu\">\n");
-      out.write("                      <a href=\"javascript:;\" >\n");
+      out.write("                      <a href=\"manualPKSearch.jsp\" >\n");
       out.write("                          <i class=\"fa fa-search\"></i>\n");
       out.write("                          <span>Search Services</span>\n");
       out.write("                      </a>\n");
       out.write("                  </li>\n");
-      out.write("                <li class=\"sub-menu\">\n");
+      out.write("                  <li class=\"sub-menu\">\n");
       out.write("                      <a href=\"javascript:;\" >\n");
+      out.write("                          <i class=\"automaticPG.jsp\"></i>\n");
+      out.write("                          <span>Generate Packages</span>\n");
+      out.write("                      </a>\n");
+      out.write("                  </li>\n");
+      out.write("                  \n");
+      out.write("                <li class=\"sub-menu\">\n");
+      out.write("                      <a href=\"requestStatus.jsp\" >\n");
       out.write("                          <i class=\"fa fa-list\"></i>\n");
       out.write("                          <span>Request Status</span>\n");
       out.write("                      </a>\n");
@@ -195,8 +200,8 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
       out.write("              <div class=\"row\">\r\n");
       out.write("                  <div class=\"col-lg-9 main-chart\">\r\n");
       out.write("                        <div class=\"row mtbox\">\r\n");
-      out.write("                            <h2 class=\"section-heading\" style=\"color: black\" >  Package Generator </h2>   \r\n");
-      out.write("                  <h3 class=\"section-heading\">  Enter Your Request </h3>\r\n");
+      out.write("                            <h2 class=\"section-heading\" style=\"color: black\" >  Package Description </h2>   \r\n");
+      out.write("                  \r\n");
       out.write("                      <br>\r\n");
       out.write("                  \t");
    String Owner="";
@@ -207,6 +212,7 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
              String Province= "" ;
              String lat = "";
              String longt = "";
+             String Weburl ="";
              String Service = request.getParameter("Service").replaceAll("\\s","");
              String Package = request.getParameter("Package").replaceAll("\\s","");
              session.setAttribute("Service", Service);
@@ -222,6 +228,7 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
               Address=resultServiceDetails.getString("Address");
               lat=resultServiceDetails.getString("Latitude");
               longt=resultServiceDetails.getString("Longitute");
+              Weburl =resultServiceDetails.getString("WebsiteURL");
                }  
               
              
@@ -235,26 +242,27 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
       out.write("             <table style=\"width: 100%\">\r\n");
       out.write("                 <tr>\r\n");
       out.write("                     <td>\r\n");
-      out.write("            <div class=\"col-lg-12 text-left\"> \r\n");
+      out.write("            <div style=\"height: 400px; width:400px \" class=\"col-lg-12 text-left\"> \r\n");
       out.write("             \r\n");
-      out.write("                 Service: ");
+      out.write("                <h5>   Service: ");
       out.print(Service );
-      out.write("  </br>\r\n");
+      out.write("  </br></br>\r\n");
       out.write("                 Package: ");
       out.print(Package );
-      out.write("  </br>\r\n");
+      out.write("  </br></br>\r\n");
       out.write("                 Owner : ");
       out.print(Owner );
-      out.write(" </br>\r\n");
+      out.write(" </br></br>\r\n");
       out.write("                Address: <p>  ");
       out.print(Address );
-      out.write(" </p>\r\n");
+      out.write(" </p></br>\r\n");
       out.write("                 Contact Number: <p>(+94)");
       out.print(Contact );
-      out.write(" </p>\r\n");
+      out.write(" </p> </br>\r\n");
       out.write("                  \r\n");
       out.write("                  <p> Package Includes Following Services:  </p>\r\n");
-      out.write("                   <ul >\r\n");
+      out.write("                  <div>\r\n");
+      out.write("                   <ol >\r\n");
       out.write("                 ");
  
                   while(resultPackagedetails.next()){
@@ -266,9 +274,19 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
       out.write("                 ");
 
                     }
+                 if(Weburl != null){
                  
+      out.write(" \r\n");
+      out.write("                    \r\n");
+      out.write("                    For more details visit ");
+      out.print(Weburl );
       out.write("\r\n");
-      out.write("                   </ul> \r\n");
+      out.write("                    \r\n");
+      out.write("                    ");
+} 
+      out.write("\r\n");
+      out.write("                   </ol>\r\n");
+      out.write("                  </div></h5>\r\n");
       out.write("                   <br/> <br/>       \r\n");
       out.write("             </div>\r\n");
       out.write("                   </td>\r\n");
@@ -279,7 +297,7 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
       out.write("             var longti=parseFloat( document.getElementById('longtitude').value);\r\n");
       out.write("        var uluru = {lat:lati,lng: longti};\r\n");
       out.write("        var map = new google.maps.Map(document.getElementById('map'), {\r\n");
-      out.write("          zoom: 7,\r\n");
+      out.write("          zoom: 10,\r\n");
       out.write("          center: uluru\r\n");
       out.write("             });\r\n");
       out.write("        var marker = new google.maps.Marker({\r\n");
@@ -295,10 +313,16 @@ public final class DisplayPackageDetails_jsp extends org.apache.jasper.runtime.H
       out.write("                   </td>\r\n");
       out.write("                 </tr>\r\n");
       out.write("             </table>\r\n");
-      out.write("                  <button type=\"button\" class=\"btn btn-warning\" id=\"gallery\" >View Image Galary</button>  \r\n");
-      out.write("                  <button type=\"button\" class=\"btn btn-warning\" id=\"request\">Submit a request</button>\r\n");
-      out.write("                  <a href=\"CustomerRequest.jsp\" >Submit a request</a>\r\n");
-      out.write("                  \r\n");
+      out.write("                   <br>\r\n");
+      out.write("                   <br>\r\n");
+      out.write("                   <div>\r\n");
+      out.write("                       <br>\r\n");
+      out.write("                       <br>\r\n");
+      out.write("                       <a href=\"ServiceImageGallery.jsp\" >  Click here to view image gallery of ");
+      out.print(Service );
+      out.write(" </a> <br>\r\n");
+      out.write("                       Interested! Then click here to place a request:  <a href=\"CustomerRequest.jsp\" >Submit a request</a>\r\n");
+      out.write("                  </div>\r\n");
       out.write("                  \t</div><!-- /row mt -->\t\r\n");
       out.write("      <!-- **********************************************************************************************************************************************************\r\n");
       out.write("      RIGHT SIDEBAR CONTENT\r\n");

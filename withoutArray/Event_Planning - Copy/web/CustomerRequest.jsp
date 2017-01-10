@@ -44,20 +44,15 @@
 
 
                                         <label>Requested Date</label>
-                                        <div class="input-group date">
-                                            <input name='ReqDate' type="text" class="form-control" value="10-22-2016" placeholder="Enter the reuested date">
-                                            <div class="input-group-addon">
-                                                <span class="glyphicon glyphicon-th"></span>
-                                            </div>
-                                            <br>
+                                        
+                                            <input name='ReqDate' type="date" class="form-control"  placeholder="Enter the requested date">
+                                                                                        <br>
                                         </div>
                                         <label>Requested Time</label>
-                                        <div class="input-group date">
-                                            <input  name='ReqTime' type="text" class="form-control" value="10-22-2016" placeholder="Enter the reuested time">
-                                            <div class="input-group-addon">
-                                                <span class="glyphicon glyphicon-th"></span>
-                                            </div>
-                                        </div>
+                                      
+                                            <input  name='ReqTime' type="time" class="form-control"  placeholder="Enter the reuested time">
+                                           
+                                      
                                         <br>
                                         <label>Maximum No of guests</label>
                                         <input name='guests' type="text" class="form-control" value="" placeholder="no of guests">

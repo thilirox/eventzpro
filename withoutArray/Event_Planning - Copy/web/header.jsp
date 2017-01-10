@@ -29,21 +29,22 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               <%
-                   //   String uname = session.getAttribute("userName").toString();
+                    // String uname = session.getAttribute("userName").toString();
+                    // <h5 class="centered"><%=//uname %> </h5>
                       %>
               	  
               	 <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered"><%//=uname %></h5>
+              	 
               	  	
                   <li class="mt">
-                      <a class="active" href="index.jsp">
+                      <a  href="index.jsp">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="registerUser.jsp" >
                           <i class="fa fa-user"></i>
                           <span>Edit Profile</span>
                       </a>
@@ -51,13 +52,20 @@
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;" >
+                      <a href="manualPKSearch.jsp" >
                           <i class="fa fa-search"></i>
                           <span>Search Services</span>
                       </a>
                   </li>
-                <li class="sub-menu">
+                  <li class="sub-menu">
                       <a href="javascript:;" >
+                          <i class="automaticPG.jsp"></i>
+                          <span>Generate Packages</span>
+                      </a>
+                  </li>
+                  
+                <li class="sub-menu">
+                      <a href="requestStatus.jsp" >
                           <i class="fa fa-list"></i>
                           <span>Request Status</span>
                       </a>

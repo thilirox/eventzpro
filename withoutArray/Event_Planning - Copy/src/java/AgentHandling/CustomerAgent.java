@@ -21,6 +21,7 @@ import masmt2.message.MaSMTMessage;
  */
 public class CustomerAgent extends masmt2.agent.MaSMTAgent {
    agentOutputHandling obj = new agentOutputHandling();
+   arrayItemHandling obj1 = new arrayItemHandling();
 
     public String price;
     public String cusSelect;
@@ -51,7 +52,7 @@ public class CustomerAgent extends masmt2.agent.MaSMTAgent {
     public void active() {
         
         System.out.println("[Active] .... " + super.agent);
-        float fPrice = Float.parseFloat(price);
+        int fPrice = Integer.parseInt(price);
         System.out.println(cusSelect);
         MaSMTMessage m = new MaSMTMessage(agent, agent, agent, "get_sales", cusSelect + fPrice, "text", "broadcast");
         sendMessage(m);
@@ -72,7 +73,9 @@ public class CustomerAgent extends masmt2.agent.MaSMTAgent {
             
           String formatedOutput=removeString(tempmes.content,header);
            try {
-               obj.saveInitial(formatedOutput);
+              // obj.saveInitial(formatedOutput);
+               
+               obj1.splitArray(formatedOutput);
                System.out.println(formatedOutput);
                } 
            catch (Exception ex) {

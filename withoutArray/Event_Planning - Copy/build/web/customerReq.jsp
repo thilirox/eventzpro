@@ -95,7 +95,7 @@
      function Redirect() {
                window.location="CustomerRequest.jsp";
             }
-            setTimeout('Redirect()', 10000);
+            setTimeout('Redirect()', 8000);
            // swal("Oops...", "Wrong User Name and Password!", "Check Again");
           swal("Success!", "Your Request Was Submitted and a Mail was triggered to Service Provider", "success");
             
